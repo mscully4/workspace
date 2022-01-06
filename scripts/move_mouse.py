@@ -22,3 +22,5 @@ if __name__ == "__main__":
 	logger.info(f"Moving mouse up {rand} pixel")
 	pyautogui.moveRel(0, rand)
 	logger.info(f"Moved mouse up {rand} pixel")
+
+ 	pyautogui.press('space')
