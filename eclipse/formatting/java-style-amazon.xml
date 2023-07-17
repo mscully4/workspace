@@ -13,10 +13,16 @@
     <!-- See: https://stackoverflow.com/a/42815523 -->
     <setting id="org.eclipse.jdt.core.formatter.alignment_for_selector_in_method_invocation" value="82" />
 
+    <!-- Add space between import groups -->
+    <setting id="org.eclipse.jdt.core.formatter.blank_lines_between_import_groups" value="1" />
+
     <!-- Alignment for arguments, parameters, etc -->
     <setting id="org.eclipse.jdt.core.formatter.alignment_for_arguments_in_method_invocation" value="18"/>
     <setting id="org.eclipse.jdt.core.formatter.alignment_for_parameters_in_method_declaration" value="18" />
     <setting id="org.eclipse.jdt.core.formatter.alignment_for_parameters_in_constructor_declaration" value="18" />
+
+    <!-- Indents Array Members Once (4 Spaces) in Array Initialization -->
+    <setting id="org.eclipse.jdt.core.formatter.continuation_indentation_for_array_initializer" value="1" />
 
     <!-- Google's Java Style -->
     <setting id="org.eclipse.jdt.core.formatter.comment.insert_new_line_before_root_tags" value="insert" />
@@ -211,7 +217,6 @@
     <setting id="org.eclipse.jdt.core.formatter.insert_space_after_and_in_type_parameter" value="insert" />
     <setting id="org.eclipse.jdt.core.formatter.alignment_for_annotations_on_type" value="1585" />
     <setting id="org.eclipse.jdt.core.compiler.compliance" value="1.7" />
-    <setting id="org.eclipse.jdt.core.formatter.continuation_indentation_for_array_initializer" value="2" />
     <setting id="org.eclipse.jdt.core.formatter.insert_space_between_empty_brackets_in_array_allocation_expression" value="do not insert" />
     <setting id="org.eclipse.jdt.core.formatter.insert_space_before_at_in_annotation_type_declaration" value="insert" />
     <setting id="org.eclipse.jdt.core.formatter.alignment_for_arguments_in_allocation_expression" value="16" />
@@ -248,7 +253,6 @@
     <setting id="org.eclipse.jdt.core.formatter.insert_new_line_before_while_in_do_statement" value="do not insert" />
     <setting id="org.eclipse.jdt.core.formatter.alignment_for_arguments_in_enum_constant.count_dependent" value="16|-1|16" />
     <setting id="org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_package" value="insert" />
-    <setting id="org.eclipse.jdt.core.formatter.blank_lines_between_import_groups" value="0" />
     <setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_enum_constant_arguments" value="do not insert" />
     <setting id="org.eclipse.jdt.core.formatter.insert_space_before_semicolon" value="do not insert" />
     <setting id="org.eclipse.jdt.core.formatter.brace_position_for_constructor_declaration" value="end_of_line" />
