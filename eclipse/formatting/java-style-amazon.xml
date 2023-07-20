@@ -3,7 +3,7 @@
   <profile kind="CodeFormatterProfile" name="PineappleDev" version="1">
     <!-- Custom Settings -->
     <setting id="org.eclipse.jdt.core.formatter.lineSplit" value="120" />
-    <setting id="org.eclipse.jdt.core.formatter.comment.line_length" value="100" />
+    <setting id="org.eclipse.jdt.core.formatter.comment.line_length" value="120" />
     <setting id="org.eclipse.jdt.core.formatter.blank_lines_after_package" value="1" />
 
     <setting id="org.eclipse.jdt.core.compiler.source" value="1.7" />
