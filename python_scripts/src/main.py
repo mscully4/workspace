@@ -1,6 +1,7 @@
 from . import convert_ddb_export_to_json
 from . import cp_to_s3
 from . import delete_bucket
+from . import get_s3_object_w_url
 
 import logging
 import contextlib
@@ -14,6 +15,7 @@ scripts = {
     "cp_to_s3": cp_to_s3.main,
     "delete_bucket": delete_bucket.main,
     "convert_ddb_export_to_json": convert_ddb_export_to_json.main,
+    "get_s3_object_w_url": get_s3_object_w_url.main
 }
 
 
@@ -78,6 +80,9 @@ def main(argv: Optional[List[str]] = None) -> None:
             return
         case "convert_ddb_export_to_json":
             convert_ddb_export_to_json.main(remaining_args)
+            return
+        case "get_s3_object_w_url":
+            get_s3_object_w_url.main(remaining_args)
             return
         case _:
             logger.info(f"Unknown script '{script_name}'")
