@@ -28,7 +28,7 @@ def parse_args(
     parser = argparse.ArgumentParser(
         description="A CLI tool for processing DDB exports"
     )
-    parser.add_argument("--files", required=True, type=str, nargs="+")
+    parser.add_argument("--files", required=True, type=str)
     parser.add_argument("--output", required=True, type=str)
     parser.add_argument("--threads", required=False, default=DEFAULT_THREADS, type=int)
     return parser.parse_args(argv)
@@ -41,18 +41,19 @@ def split(a: Iterable, n: int) -> List[List]:
 
 def process_file(files: List[str], records, thread_no: int):
     for file in files:
-        for i, line in enumerate(file.readlines()):
-            if line == "":
-                continue
+        with open(file, 'r') as fh:
+            for i, line in enumerate(fh.readlines()):
+                if line == "":
+                    continue
 
-            if i % 10000 == 0:
-                print(f"Thread {thread_no} has processed {i} records in {file.name}")
+                if i % 10000 == 0:
+                    print(f"Thread {thread_no} has processed {i} records in {file}")
 
-            try:
-                item = json_util.loads(line)["Item"]
-                records.append(item)
-            except Exception as e:
-                logger.exception("Error processing record")
+                try:
+                    item = json_util.loads(line)["Item"]
+                    records.append(item)
+                except Exception as e:
+                    logger.exception("Error processing record")
 
 
 def write_output(records, path):
